@@ -70,7 +70,7 @@ const columns = [
 function App() {
   return (
     <div className="App">
-      <TableComponent row={dataSource} column={columns} columnWithChecks={3}
+      <TableComponent row={dataSource} column={columns} columnWithChecks={1}
       />
     </div>
   );

@@ -61,10 +61,10 @@ const TableComponent = (props)=> {
     useEffect(() => {
        let initialState = [...props.row]
         initialState.forEach((item,key)=>{
-            initialState[key] = 0
+            initialState[key] = 1
        }
        )
-       initialState.push(0)
+       initialState.push(1)
        setData(initialState)
 
        return() => {
