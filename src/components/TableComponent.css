@@ -1,0 +1,32 @@
+
+th,
+td {
+  padding: 15px;
+  text-align: start;
+}
+
+th {
+  background-color: rgb(213, 239, 248);
+}
+
+table {
+  margin: auto;
+}
+
+table tr:nth-child(even) {
+  background-color: rgb(233, 231, 214);
+}
+
+tr:hover td {
+  cursor: pointer;
+  background-color: rgb(201, 231, 231);
+}
+.tb-header {
+display:'flex';
+justify-content:'flex-start';
+}
+.tb-checkbox {
+  margin-right:10px;
+  margin-top:5px;
+  background-color:'red'
+}
