@@ -29,7 +29,7 @@ const TableComponent = (props)=> {
     const renderColumns = (columns,columnNumber,data,setData) =>{
           
         return (
-                columns?.map((item,key)=>(
+                columns.map((item,key)=>(
                   
                         key==columnNumber? <th key={key} className="tb-header"><input type="checkbox" className="tb-checkbox" checked={!data[0]?false:true} onChange={()=>checkAll(data,setData)}/> {item.title}</th>: <th key={key}>{item.title}</th>
                 )
@@ -43,7 +43,7 @@ const TableComponent = (props)=> {
     const renderRows= (rows,columnWithChecks,data,setData) =>{
     
             return (
-                rows?.map((item,keys)=>{
+                rows.map((item,keys)=>{
                     return(
                         <tr key={keys}>
                             

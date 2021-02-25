@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactDom from 'react-dom'
 import {shallow} from 'enzyme'
 import TableComponent from './TableComponent'
 import checkPropTypes from 'check-prop-types';
@@ -22,8 +23,17 @@ const dataSource = [
   ];
 
   
+
+//   it('renders without error',()=>{
+//     const div = document.createElement('div')
+//     ReactDOM.render(<TableComponent></TableComponent>,div)
+        // const {getByTestId} = render(<TableComponent props></TableComponent>)
+        // expect(getByTestId('button')).toHaveTextContent('Click me')
+//   })
+
+
 const setUpComponent = (props={}) => {
-    const component = shallow(   <TableComponent {...props}/>)
+    const component = shallow( <TableComponent {...props}/>)
     return component
 }
 
@@ -60,7 +70,7 @@ describe('Table Component',()=>{
     describe('Have props',()=>{
 
         
-        var wrapper;
+        let wrapper;
         beforeEach(()=>{
             const props = {
                 row:dataSource,
@@ -70,6 +80,7 @@ describe('Table Component',()=>{
             wrapper = setUpComponent(props)
         })
 
+        
         it('Should render without errors',()=>{
             const component = findByTestAtrr(wrapper,'TableComponent')
             expect(component.length).toBe(1);
