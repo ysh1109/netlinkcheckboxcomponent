@@ -90,11 +90,9 @@ const TableComponent = (props)=> {
         <div data-test="TableComponent">
             <h1>Table content</h1>
             <table>
-                <tbody key={1}>
                 {renderColumns(props.column,props.columnWithChecks,data,setData)}
                 {renderRows(props.row,props.columnWithChecks,data,setData)}
                
-                </tbody>
             </table>
         </div>
     )
